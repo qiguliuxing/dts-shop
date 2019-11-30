@@ -1,0 +1,14 @@
+<view class='newsDetail'>
+   <view class='title'>{{title}}</view>
+   <view class='list acea-row row-middle'>
+      <view wx:if="{{type == 1}}" class='label cart-color'>公告</view>
+      <view wx:else class='label cart-color'>新闻</view>
+      <view class='item'><text class='iconfont icon-shenhezhong'></text>{{addTime}}</view>
+      <view class='item'><text class='iconfont icon-liulan'></text>10000+</view>
+   </view>
+   <view class='conter'>
+     <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+   </view>
+</view>
+<import src="/lib/wxParse/wxParse.wxml" />
+<home></home>

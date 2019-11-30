@@ -1,0 +1,372 @@
+page {
+  height: auto;
+  min-height: 100%;
+  background: #f4f4f4;
+}
+
+.address-box {
+  width: 100%;
+  height: 166.55rpx;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAKCAMAAADfAc3wAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURc2AgICg1v///+rw+ffq6tKMjI2p2ouo2QT3I5MAAAA9SURBVCjPpcs5EgAgCARB5ND//9jEYwlZJp1q0ZTNAS3L10OgcGlYlYZNuGoRly3guv2YsA8z9mLKHsxZ3e5sBBsNqhCTAAAAAElFTkSuQmCC') 0 0 repeat-x;
+  background-size: 62.5rpx 10.5rpx;
+  margin-bottom: 20rpx;
+  padding-top: 10.5rpx;
+}
+
+.address-item {
+  display: flex;
+  height: 155.55rpx;
+  background: #fff;
+  padding: 41.6rpx 0 41.6rpx 31.25rpx;
+}
+
+.address-item.address-empty {
+  line-height: 75rpx;
+  text-align: center;
+}
+
+.address-box .l {
+  width: 125rpx;
+  height: 100%;
+}
+
+.address-box .l .name {
+  margin-left: 6.25rpx;
+  margin-top: -7.25rpx;
+  display: block;
+  width: 125rpx;
+  height: 43rpx;
+  line-height: 43rpx;
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+
+.address-box .l .default {
+  margin-left: 6.25rpx;
+  display: block;
+  width: 62rpx;
+  height: 33rpx;
+  border-radius: 5rpx;
+  border: 1px solid #b4282d;
+  font-size: 20.5rpx;
+  text-align: center;
+  line-height: 29rpx;
+  color: #b4282d;
+}
+
+.address-box .m {
+  flex: 1;
+  height: 72.25rpx;
+  color: #999;
+}
+
+.address-box .mobile {
+  display: block;
+  height: 29rpx;
+  line-height: 29rpx;
+  margin-bottom: 16.25rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.address-box .address {
+  display: block;
+  height: 37.5rpx;
+  line-height: 37.5rpx;
+  font-size: 25rpx;
+  color: #666;
+}
+
+.address-box .r {
+  width: 77rpx;
+  height: 77rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.address-box .r image {
+  width: 52.078rpx;
+  height: 52.078rpx;
+}
+
+.coupon-box {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #fafafa;
+}
+
+.coupon-box .coupon-item {
+  width: 100%;
+  height: 78.3rpx;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  padding-left: 31.25rpx;
+}
+
+.coupon-box .l {
+  flex: 1;
+  height: 33rpx;
+  line-height: 33rpx;
+  padding-top: 25rpx;
+}
+
+.coupon-box .l .name {
+  float: left;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.coupon-box .l .txt {
+  float: right;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.coupon-box .r {
+  margin-top: 10.5rpx;
+  width: 77rpx;
+  height: 57rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coupon-box .r image {
+  width: 52.078rpx;
+  height: 52.078rpx;
+}
+
+.message-box {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 16.25rpx;
+}
+
+.message-box .message-item {
+  height: 72.078rpx;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  margin-left: 31.25rpx;
+  padding-right: 31.25rpx;
+  padding-top: 10rpx;
+}
+
+.group-item {
+ width: 100%;
+ background: #fff;
+ height: auto;
+ padding-right: 11.25rpx;
+ margin-bottom: 26.25rpx;
+}
+.group-item .h {
+  height: 83.3rpx;
+  line-height: 83.3rpx;
+  margin-left: 21.25rpx;
+  padding-right: 11.25rpx;
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.group-item .h .l {
+  float: left;
+  font-weight:bold;
+}
+
+.brand-order{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+}
+
+
+.brand-order .order-item {
+  height: 64.3rpx;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  margin-left: 31.25rpx;
+  padding-right: 31.25rpx;
+  padding-top: 16rpx;
+  border-bottom: 1px solid #fafafa;
+}
+
+.brand-order .order-item .l {
+  float: left;
+  height: 42rpx;
+  width: 50%;
+  line-height: 42rpx;
+  overflow: hidden;
+}
+
+.brand-order .order-item .r {
+  float: right;
+  text-align: right;
+  width: 50%;
+  height: 42rpx;
+  line-height: 42rpx;
+  overflow: hidden;
+}
+
+.order-box {
+  margin-top: 10rpx;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 120rpx;
+}
+
+.order-box .order-item {
+  height: 64.3rpx;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  margin-left: 31.25rpx;
+  padding-right: 31.25rpx;
+  padding-top: 16rpx;
+  border-bottom: 1px solid #fafafa;
+}
+
+.order-box .order-item .l {
+  float: left;
+  height: 42rpx;
+  width: 50%;
+  line-height: 42rpx;
+  overflow: hidden;
+}
+
+.order-box .order-item .r {
+  float: right;
+  text-align: right;
+  width: 50%;
+  height: 42rpx;
+  line-height: 42rpx;
+  overflow: hidden;
+}
+
+.order-box .order-item.no-border {
+  border-bottom: none;
+}
+
+.goods-items {
+  margin-top: 20rpx;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.goods-items .item {
+  height: 162rpx;
+  padding-left: 11.25rpx;
+  padding-right: 31.25rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #fafafa;
+}
+
+.goods-items .item.no-border {
+  border-bottom: none;
+}
+
+.goods-items .item:last-child {
+  border-bottom: none;
+}
+
+.goods-items .img {
+  height: 145.83rpx;
+  width: 145.83rpx;
+  background-color: #f4f4f4;
+  margin-right: 20rpx;
+}
+
+.goods-items .img image {
+  height: 145.83rpx;
+  width: 145.83rpx;
+}
+
+.goods-items .info {
+  flex: 1;
+  height: 145.83rpx;
+  padding-top: 5rpx;
+}
+
+.goods-items .t {
+  height: 33rpx;
+  line-height: 33rpx;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.goods-items .t .name {
+  display: block;
+  float: left;
+}
+
+.goods-items .b {
+  float: left;
+  height: 41rpx;
+  overflow: hidden;
+  line-height: 41rpx;
+  font-size: 30rpx;
+  color: #ec4223;
+}
+.goods-items .number {
+  display: block;
+  float: right;
+  text-align: right;
+}
+
+.goods-items .m {
+  height: 29rpx;
+  overflow: hidden;
+  line-height: 29rpx;
+  margin-bottom: 25rpx;
+  font-size: 25rpx;
+  color: #999;
+}
+
+
+.order-total {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+}
+
+.order-total .l {
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #b4282d;
+  background: #fff;
+  font-size: 33rpx;
+  padding-left: 31.25rpx;
+  border-top: 1rpx solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.2);
+}
+
+.order-total .r {
+  width: 233rpx;
+  height: 100rpx;
+  background: #b4282d;
+  border: 1px solid #fafafa;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+}

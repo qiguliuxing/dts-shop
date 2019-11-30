@@ -1,0 +1,82 @@
+  <view class="container">
+    <view class="h">
+      <view class="line"></view>
+      <text class="title">可提现余额</text>
+    </view>
+    <view class="b">
+      <view class="number">¥ {{remainAmount}}</view>
+      <view class='extractBtn' bindtap="extractMoney">
+        <text class='btxt'>提现申请</text>
+      </view>
+    </view>
+    
+    <view class='separate'></view>
+
+    <view class='user_area'>
+      <view class='user_row' bindtap='goExtract'>
+        <view class='user_row_left jhx_f4'>我的提现记录</view>
+        <text class='user_row_right iconfont icon-jiantou jhx_f6'></text>
+      </view>
+
+      <view class='user_column'>
+        <view class="item_left">
+          <text class="name"> 本月收益</text>
+          <text class="money" >¥ {{currMonthSettleMoney}}</text>
+        </view>
+        <view class="item_rigth">
+          <text class="name"> 上月收益 </text>
+          <text class="money">¥ {{lastMonthSettleMoney}}</text>
+        </view>
+      </view>
+
+    </view>
+
+    <view class='separate'></view>
+
+    <view class='order_area'>
+      <view class='user_row' bindtap='goOrderList'>
+        <view class='user_row_left jhx_f4'>推广订单明细</view>
+        <text class='user_row_right iconfont icon-jiantou jhx_f6'></text>
+      </view>
+
+      <view class="chose_type">
+        <button class='btn_left {{today_type}}' data-type="1" bindtap="switchTabType">
+          <text class='chose-p'>今日</text>
+        </button>
+        <button class='btn_center {{yestoday_type}}' data-type="2" bindtap="switchTabType">
+          <text class='chose-p'>昨日</text>
+        </button>
+        <button class='btn_center {{week_type}}' data-type="3" bindtap="switchTabType">
+          <text class='chose-p'>近7日</text>
+        </button>
+        <button class='btn_rigth {{month_type}}' data-type="4" bindtap="switchTabType">
+          <text class='chose-p'>近30日</text>
+        </button>
+      </view>
+
+      <view class='order_column'>
+        <view class="order_column_item">
+          <text class="info"> 推广用户数</text>
+          <text class="value" >{{currType.userCnt}} 个</text>
+        </view>
+        <view class="order_column_item">
+          <text class="info"> 推广订单数 </text>
+          <text class="value">{{currType.orderCnt}} 笔</text>
+        </view>
+      </view>
+
+      <view class='order_column'>
+        <view class="order_column_item">
+          <text class="info"> 预估收益</text>
+          <text class="value" >{{currType.orderSettleAmt}} 元</text>
+        </view>
+        <view class="order_column_item">
+          <text class="info"> 预估结算收益 </text>
+          <text class="value">{{currType.finalSettleAmt}} 元</text>
+        </view>
+      </view>
+
+    </view>
+
+    
+  </view>

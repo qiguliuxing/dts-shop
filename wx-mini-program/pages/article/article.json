@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "公告详情",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "home": "../../lib/home/index"
+  }
+}

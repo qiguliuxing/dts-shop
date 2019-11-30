@@ -1,0 +1,85 @@
+<view class='container'>
+
+  <view class='topExpress'>
+    <view class='topExpress-left'>
+       <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class='topExpress-right'>
+      <view class='topExpress-right-top'>{{shipperName}}</view>
+      <view class='topExpress-right-middle'>运单号：{{shipperCode}}</view>
+      <view class='topExpress-right-middle'>收货地址：{{address}}</view>
+    </view>
+  </view>
+
+
+  <!-- 物流时间轴 -->
+  <view class='expressRecord'>
+      <!-- 顶部收货地址 -->
+      <view class='expressRecord-getAddress'>
+          <view class='expressRecord-top'>
+            <view class='getAddress-icon unfinish' wx:if="{{state != 3}}"></view>
+            <view class='getAddress-icon finish' wx:if="{{state == 3}}"></view>
+            <view class='getAddress-text' wx:if="{{state == 2}}">运输中</view>
+            <view class='getAddress-text' wx:if="{{state == 3}}">已签收</view>
+            <view class='getAddress-text' wx:if="{{state == 4}}">快递如有疑问请联系客服</view>
+          </view>
+      </view>
+
+    <!-- 顶部收货地址半个时间轴线 -->
+    <view class='noReach-online-top-close'></view>
+
+
+    <!-- 单个物流记录点时间轴：当前正在进行的物流状态 -->
+    <view class='expressRecord-single-close' wx:for="{{traces}}" wx:key="acceptTime">
+
+      <!-- 左边子容器 -->
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <!-- 正在进行的时间轴上半个时间线 -->
+        <view class='online-top-closing'></view>
+        <!-- 正在进行的时间轴点 -->
+        <view class='dot-close'></view>
+        <!-- 正在进行的时间轴下半个时间线 -->
+        <view class='online-bottom'></view>
+      </view>
+
+      <!-- 右边子容器 -->
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status-address'>{{item.acceptStation}}</view>
+      </view>
+
+      <!-- 相对父级容器绝对定位的日期 -->
+      <view class='expressRecord-date'>
+        <view class='expressRecord-date-text'>
+         {{item.date}}
+        </view>
+        <view class='expressRecord-date-time'>
+          {{item.time}}
+        </view>
+      </view>
+    </view>
+
+    <view class='expressRecord-single-close'>
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <view class='online-top-close'></view>
+        <view class='dot-close'></view>
+        <!-- 起始位置，下半个时间轴线不用 -->
+        <view class='online-bottom-start'></view>
+      </view>
+
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status-address'>卖家发货</view>
+      </view>
+
+      <view class='expressRecord-date'>
+        <view class='expressRecord-date-text'>
+          {{shipDate}}
+        </view>
+        <view class='expressRecord-date-time'>
+          {{shipTime}}
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

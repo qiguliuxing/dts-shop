@@ -1,0 +1,201 @@
+page {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  background: #f4f4f4;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.topExpress {
+  width: 710rpx;
+  height: 155rpx;
+  background: #fff;
+  margin: 10rpx auto;
+  display: flex;
+  border-radius: 10rpx;
+}
+
+.topExpress-left {
+  width: 150rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topExpress-left .avatar {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius:50%;
+  text-align: center;
+  float: left;
+}
+
+
+.topExpress-right {
+  font-size: 26rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20rpx 0;
+}
+
+.topExpress-right-middle {
+  font-size: 28rpx;
+}
+
+.topExpress-right-bottom {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.expressRecord {
+  width: 710rpx;
+  padding-top: 30rpx;
+  padding-bottom: 200rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 10rpx;
+}
+
+.expressRecord-getAddress {
+  width: 100%;
+  font-size: 28rpx;
+  color: #999;
+  display: flex;
+}
+
+.expressRecord-top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.getAddress-icon {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  font-size: 28rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 152rpx;
+}
+.finish {
+  background: #45dd09;
+}
+.unfinish {
+  background: #f7f303;
+}
+.getAddress-text {
+  margin-left: 20rpx;
+}
+
+.noReach-online-top-close {
+  width: 1rpx;
+  height: 50rpx;
+  background: #999;
+  margin-left: 165rpx;
+}
+
+.expressRecord-single-close {
+  width: 100%;
+  height: 122rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.expressRecord-single-noReach-online-top-close {
+  display: flex;
+  flex-direction: column;
+}
+
+.online-top-closing {
+  width: 2rpx;
+  height: 50rpx;
+  background: #999;
+  margin-left: 165rpx;
+}
+
+.online-top-close {
+  width: 2rpx;
+  height: 50rpx;
+  background: #999;
+  margin-left: 165rpx;
+}
+
+.dot-close {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  margin-left: 155rpx;
+  margin-top: 6rpx;
+  margin-bottom: 6rpx;
+  background: rgb(21, 216, 4);
+}
+
+.online-bottom {
+  width: 2rpx;
+  height: 50rpx;
+  background: #999;
+  margin-left: 165rpx;
+}
+
+.online-bottom-start {
+  width: 2rpx;
+  height: 50rpx;
+  /* background: #999; */
+  margin-left: 165rpx;
+}
+
+.expressRecord-text {
+  margin-left: 30rpx;
+}
+
+.expressRecord-statusing {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.expressRecord-status-address {
+  font-size: 28rpx;
+  color: #666;
+}
+
+
+.expressRecord-status {
+  font-size: 35rpx;
+  color: #999;
+}
+
+.expressRecord-date {
+  position: absolute;
+  height: 100%;
+  /* top: 0;
+  bottom: 0; */
+  left: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #666;
+}
+
+.expressRecord-date-text {
+  font-size: 28rpx;
+}
+
+.expressRecord-date-time {
+  font-size: 28rpx;
+}

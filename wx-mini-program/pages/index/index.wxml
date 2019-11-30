@@ -1,0 +1,197 @@
+<!--index.wxml-->
+<view class="container">
+ <view class="search">
+    <navigator url="/pages/search/search" class="input jhx_bg1">
+      <image class="icon"></image>
+      <text class="txt jhx_f1">商品搜索, 共{{goodsCount}}款供您选择...</text>
+    </navigator>
+  </view>
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{banner}}" wx:key="id">
+      <!-- <navigator url="{{item.link}}"> -->
+      <image src="{{item.url}}" background-size="cover"></image>
+      <!-- </navigator> -->
+    </swiper-item>
+  </swiper>
+  <view class='news acea-row row-between-wrapper'>
+       <view class='pictrue'><image src='/static/images/news.png'></image></view>
+       <view class='swiperTxt'>
+            <swiper indicator-dots="{{indicatorDots}}" autoplay="true" interval="2500" duration="500" vertical="true" circular="true">
+                <block wx:for="{{articles}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+                    <swiper-item catchtouchmove='catchTouchMove'>
+                        <navigator  hover-class="none"  url='/pages/article/article?id={{item.id}}' class='acea-row row-between-wrapper'>
+                            <view class='text acea-row row-between-wrapper'>
+                                <view class='label border2' wx:if="{{index == 0}}">最新</view>
+                                <view class='newsTitle line1 jhx_f3'>{{item.title}}</view>
+                            </view>
+                            <view class='iconfont icon-xiangyou'></view>
+                        </navigator>
+                    </swiper-item>
+                  </block>
+            </swiper> 
+       </view>
+    </view>
+
+
+  <view class="m-menu jhx_bg0">
+    <navigator hover-class="none" class="item" url="/pages/category/category?id={{item.id}}" wx:for="{{channel}}" wx:key="id">
+      <image src="{{item.iconUrl}}" background-size="cover"></image>
+      <text class="jhx_f2">{{item.name}}</text>
+    </navigator>
+    <navigator hover-class="none" class="item" url="/pages/catalog/catalog" open-type="switchTab">
+      <image src="/static/images/channel_category.png" background-size="cover"></image>
+      <text class="jhx_f2">更多分类</text>
+    </navigator>
+  </view>
+
+  <view class="a-section a-groupon" wx:if="{{groupons.length > 0}}">
+    <view class='title acea-row row-between-wrapper'>
+      <view class='text'>
+        <view class='name jhx_f4'>团购专区</view>
+        <view class='jhx_f5'>邀请好友一起团购,享受折扣减免</view>
+      </view>
+      <navigator class='more jhx_f6' hover-class="none" url='/pages/groupon/grouponList/grouponList'>更多<text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view>
+
+    <view class="b">
+      <view class="item" wx:for="{{groupons}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <navigator url="/pages/goods/goods?id={{item.goods.id}}">
+          <image class="img" src="{{item.goods.picUrl}}" background-size="cover"></image>
+          <view class="right">
+            <view class="text">
+              <view class="header">
+                <text class="name jhx_f7">{{item.goods.name}}</text>
+                <view class="capsule-tag">
+                  <zan-capsule color="#e67249" leftText="团购" rightText="{{item.groupon_member}}" />
+                </view>
+              </view>
+              <text class="desc jhx_f5">{{item.goods.brief}}</text>
+              <view class="price">
+                <view class="jhx_f8">
+                <text class="jhx_f9">团购价：</text>￥{{item.groupon_price}}
+                </view>
+                <view class="counterPrice jhx_f9">￥{{item.goods.counterPrice}}</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="a-section a-topic" wx:if="topics.length > 0">
+    <view class="h">
+      <view>
+        <navigator url="/pages/topic/topic">
+          <text class="txt jhx_f4">活动专场</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="b">
+      <scroll-view scroll-x class="list">
+        <view class="item" wx:for="{{topics}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+          <navigator url="../topicDetail/topicDetail?id={{item.id}}">
+            <image class="img" src="{{item.picUrl}}" background-size="cover"></image>
+            <view class="np">
+              <text class="name jhx_f7">{{item.title}}</text>
+              <text class="price jhx_f8">￥{{item.price}}元起</text>
+            </view>
+            <text class="desc jhx_f5">{{item.subtitle}}</text>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  
+  <view class="a-section a-brand">
+    <view class='title acea-row row-between-wrapper'>
+      <view class='text'>
+        <view class='name jhx_f4'>品牌厂商直供</view>
+        <view class='desc jhx_f5'>知名品牌厂商直供，好品质，更优惠</view>
+      </view>
+      <navigator class='more jhx_f6' hover-class="none" url='../brand/brand'>更多<text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view>
+    <view class="b">
+      <view class="item item-1" wx:for="{{brands}}" wx:key="id">
+        <navigator url="/pages/brandDetail/brandDetail?id={{item.id}}">
+          <view class="wrap">
+            <image class="img" src="{{item.picUrl}}" mode="aspectFill"></image>
+            <view class="mt">
+             <!-- <text class="brand">{{item.name}}</text>
+              <text class="price">{{item.floorPrice}}</text>
+              <text class="unit">元起</text> -->
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="a-section a-new" wx:if="{{newGoods.length > 0}}">
+    <view class='title acea-row row-between-wrapper'>
+      <view class='text'>
+        <view class='name jhx_f4'>全网 · 新品首发<text class='new font-color'>NEW~</text></view>
+        <view class='desc jhx_f5'>全网最新上架上架</view>
+      </view>
+      <navigator class='more jhx_f6' hover-class="none" url='../newGoods/newGoods'>更多<text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view>
+    <view class="b">
+      <view class="item" wx:for="{{newGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <navigator url="../goods/goods?id={{item.id}}">
+          <image class="img" src="{{item.picUrl}}" background-size="cover"></image>
+          <text class="name jhx_f7">{{item.name}}</text>
+          <text class="price jhx_f8">￥{{item.retailPrice}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class="a-section a-popular" wx:if="{{hotGoods.length > 0}}">
+   <view class='hot-bg'>
+          <view class='title acea-row row-between-wrapper'>
+            <view class='text'>
+            <text class='label'>人气推荐</text>根据销量、搜索、好评等综合得出
+            </view>
+            <navigator class='more jhx_f6' hover-class="none" url='../hotGoods/hotGoods'>更多<text class="iconfont icon-jiantou"></text></navigator>
+          </view>
+    </view>
+       
+    <view class="b">
+      <view class="item" wx:for="{{hotGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <navigator url="/pages/goods/goods?id={{item.id}}">
+          <image class="img" src="{{item.picUrl}}" background-size="cover"></image>
+          <view class="right">
+            <view class="text">
+              <text class="name jhx_f7">{{item.name}}</text>
+              <text class="desc jhx_f5">{{item.brief}}</text>
+              <text class="price jhx_f8">￥{{item.retailPrice}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class="good-grid" wx:for="{{floorGoods}}" wx:key="id">
+    <view class="h">
+      <text class="jhx_f4">{{item.name}}</text>
+    </view>
+    <view class="b">
+      <block wx:for="{{item.goodsList}}" wx:for-index="iindex" wx:for-item="iitem" wx:key="id">
+        <view class="item {{iindex % 2 == 0 ? '' : 'item-b'}}">
+          <navigator url="../goods/goods?id={{iitem.id}}" class="a">
+            <image class="img" src="{{iitem.picUrl}}" background-size="cover"></image>
+            <text class="name jhx_f7">{{iitem.name}}</text>
+            <text class="price jhx_f8">￥{{iitem.retailPrice}}</text>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <navigator url="/pages/category/category?id={{item.id}}" class="t">
+      <view class="txt jhx_f6">{{'更多'+item.name+'好物 >'}}</view>
+    </navigator>
+  </view>
+</view>
+<coupon-window window='{{window}}' couponList="{{coupon}}" bind:onColse="onColse"></coupon-window>
+

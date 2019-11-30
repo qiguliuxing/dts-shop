@@ -1,0 +1,232 @@
+page {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.orders-switch {
+  width: 100%;
+  background: #fff;
+  height: 84rpx;
+  /* border-bottom: 1px solid rgba(0,0,0,.15); */
+}
+
+.orders-switch .item {
+  display: inline-block;
+  height: 82rpx;
+  width: 18%;
+  padding: 0 15rpx;
+  text-align: center;
+}
+
+.orders-switch .item .txt {
+  display: inline-block;
+  height: 82rpx;
+  padding: 0 20rpx;
+  line-height: 82rpx;
+  color: #9a9ba1;
+  font-size: 30rpx;
+  margin-left: 20rp;
+  margin-right: 20rpx;
+  width: 140rpx;
+}
+
+.orders-switch .item.active .txt {
+  color: #85c43f;
+  border-bottom: 3rpx solid #85c43f;
+}
+
+.no-order {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.no-order .c {
+  width: 100%;
+  height: auto;
+  margin-top: 200rpx;
+}
+
+.no-order .c image {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 414rpx;
+  height: 336rpx;
+}
+
+.no-order .c text {
+  margin: 0 auto;
+  display: block;
+  width: 258rpx;
+  height: 29rpx;
+  line-height: 29rpx;
+  text-align: center;
+  font-size: 29rpx;
+  color: #999;
+}
+
+.orders {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.order {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.order .h {
+  height: 83.3rpx;
+  line-height: 83.3rpx;
+  margin-left: 31.25rpx;
+  padding-right: 31.25rpx;
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.order .h .l {
+  float: left;
+}
+
+.order .h .r {
+  float: right;
+  color: #b4282d;
+  font-size: 24rpx;
+}
+
+.order .b .cost {
+  color: #b4282d;
+}
+
+.order .b {
+  height: 103rpx;
+  line-height: 103rpx;
+  margin-left: 31.25rpx;
+  padding-right: 31.25rpx;
+  border-top: 1px solid #f4f4f4;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.order .b .l {
+  float: left;
+}
+
+.order .b .r {
+  float: right;
+}
+
+.order .b .btn {
+  margin-top: 19rpx;
+  height: 64.5rpx;
+  margin-right: 19rpx;
+  line-height: 64.5rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  border-radius: 5rpx;
+  font-size: 28rpx;
+  color: #fff;
+  float:left;
+  background: #85c43f;
+}
+
+.order .goods {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.goods .item {
+  display: flex;
+  align-items: top;
+  height: 202rpx;
+  margin-left: 31.25rpx;
+  margin-bottom: 15.25rpx;
+  padding-right: 31.25rpx;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.goods .item:last-child {
+  border-bottom: none;
+}
+
+.goods .item .img {
+  height: 145.83rpx;
+  margin-top: 15.5rpx;
+  width: 145.83rpx;
+  background: #f4f4f4;
+}
+
+.goods .item .img image {
+  height: 145.83rpx;
+  width: 145.83rpx;
+}
+
+.goods .item .info {
+  flex: 1;
+  height: 145.83rpx;
+  margin-left: 20rpx;
+}
+
+.goods .item .t {
+  margin-top: 14rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  margin-bottom: 8.5rpx;
+}
+
+.goods .item .t .name {
+  display: block;
+  float: left;
+  height: 33rpx;
+  line-height: 33rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.goods .item .t .number {
+  display: block;
+  float: right;
+  height: 29rpx;
+  text-align: right;
+  line-height: 29rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.goods .item .attr {
+  height: 29rpx;
+  line-height: 29rpx;
+  color: #666;
+  margin-bottom: 25rpx;
+  font-size: 25rpx;
+}
+
+.goods .item .price {
+  display: block;
+  float: left;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.goods .item .btn {
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  display: block;
+  float: right;
+  margin: 0 15rpx;
+  padding: 0 20rpx;
+}
+
+.goods .item .btn.active {
+  background: #ee9e09;
+  color: #fff;
+  border-radius: 40rpx;
+}
