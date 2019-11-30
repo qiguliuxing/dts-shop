@@ -9,7 +9,8 @@
 #### 平台功能介绍
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/1128/232156_2fa40a56_365545.jpeg "聚惠星商城.jpg")
 
-
+#### 商城体验码
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg "聚惠星小程序二维码.jpg")
 
 #### 安装教程
 
