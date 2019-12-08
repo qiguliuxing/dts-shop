@@ -14,11 +14,11 @@
 <tbody>
    <tr>
      <td align="left" valign="middle">
-        <img width="60%" height="60%" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
+        <img width="300" height="300" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
      </td>
      <td align="right" valign="middle">
 	<a href="https://jq.qq.com/?_wv=1027&k=5yH6R5E">
-           <img width="100%" src="https://images.gitee.com/uploads/images/2019/1208/142050_9dd4d015_365545.png?raw=true">
+           <img width="300" height="300" src="https://images.gitee.com/uploads/images/2019/1208/142050_9dd4d015_365545.png?raw=true">
 	</a>
      </td>
     </tr>
