@@ -1,18 +1,31 @@
-# dts-mall
+# dts-mall 聚惠星商城
 
-#### 介绍
+### 介绍
 聚惠星商城 DTS-SHOP，基于 微信小程序 + springboot + vue 技术构建 ，支持单店铺，多店铺入驻的商城平台。项目包含 微信小程序，管理后台。基于java后台语言，已功能闭环，且达到商用标准的一套项目体系。
 
-#### 技术栈
+### 技术栈
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/1128/231403_2801a293_365545.png "技术栈.png")
 
-#### 平台功能介绍
+### 平台功能介绍
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/1128/232156_2fa40a56_365545.jpeg "聚惠星商城.jpg")
 
-#### 商城体验码
+### 商城体验码
+<table border="0">
+	<tbody>
+		<tr>
+			<td align="left" valign="middle">
+				  <img height="360" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
+			</td>
+			<td align="right" valign="middle">
+				<img height="120" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg?raw=true">
+			</td>
+		</tr>
+	</tbody>
+</table>
+
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg "聚惠星小程序二维码.jpg")
 
-#### 安装教程
+### 安装教程
 
 1.  xxxx
 2.  xxxx
