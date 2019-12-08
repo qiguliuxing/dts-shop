@@ -11,18 +11,57 @@
 
 ### 商城体验码
 <table border="0">
-	<tbody>
-		<tr>
-			<td align="left" valign="middle">
-				  <img height="250" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
-			</td>
-			<td align="right" valign="middle">
-				<a href="https://jq.qq.com/?_wv=1027&k=5yH6R5E"><img height="250" src="https://images.gitee.com/uploads/images/2019/1208/142050_9dd4d015_365545.png?raw=true">
-			</td></a>
-		</tr>
-	</tbody>
+<tbody>
+   <tr>
+     <td align="left" valign="middle">
+        <img height="250" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
+     </td>
+     <td align="right" valign="middle">
+	<a href="https://jq.qq.com/?_wv=1027&k=5yH6R5E">
+           <img height="250" src="https://images.gitee.com/uploads/images/2019/1208/142050_9dd4d015_365545.png?raw=true">
+	</a>
+     </td>
+    </tr>
+</tbody>
 </table>
 
+### 商城体验码
+
+### 管理后端演示图
+<table border="0">
+<tbody>
+   <tr>
+     <td align="left" valign="middle">
+        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145307_557afa8a_365545.png">
+     </td>
+     <td align="left" valign="middle">
+        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145320_a5a47a3e_365545.png">
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="middle">
+        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145334_b391b90b_365545.png">
+     </td>
+     <td align="left" valign="middle">
+        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145347_d0b90b1a_365545.png">
+     </td>
+    </tr>
+   <tr>
+     <td align="left" valign="middle">
+        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145400_7162464d_365545.png">
+     </td>
+     <td align="left" valign="middle">
+        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145413_c10771ac_365545.png">
+     </td>
+    </tr>
+</tbody>
+</table>
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145307_557afa8a_365545.png "1登录页面.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145320_a5a47a3e_365545.png "2后台管理-首页.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145334_b391b90b_365545.png "3商品上传.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145347_d0b90b1a_365545.png "4商品列表.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145400_7162464d_365545.png "5广告管理.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145413_c10771ac_365545.png "6订单管理.png")
 
 ### 安装教程
 
@@ -35,20 +74,3 @@
 1.  xxxx
 2.  xxxx
 3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
