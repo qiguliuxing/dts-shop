@@ -13,7 +13,7 @@ Page({
     load_statue: true,
     shopInfo: {
       name: '聚惠星',
-      address: 'https://www.shequlianshang.com/dts/index.html',
+      address: 'https://gitee.com/qiguliuxing/dts-shop',
       latitude: 27.4871724214,
       longitude: 110.8950504844,
       linkPhone: '19908488612',
