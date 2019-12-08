@@ -52,27 +52,27 @@
 <table border="0">
 <tbody>
    <tr>
-     <td align="left" valign="middle">
-        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145307_557afa8a_365545.png">
+     <td valign="middle">
+        <img width="100%" src="https://images.gitee.com/uploads/images/2019/1208/145307_557afa8a_365545.png">
      </td>
-     <td align="right" valign="middle">
-        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145320_a5a47a3e_365545.png">
+     <td valign="middle">
+        <img width="100%" src="https://images.gitee.com/uploads/images/2019/1208/145320_a5a47a3e_365545.png">
      </td>
     </tr>
     <tr>
-     <td align="left" valign="middle">
-        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145334_b391b90b_365545.png">
+     <td valign="middle">
+        <img width="100%" src="https://images.gitee.com/uploads/images/2019/1208/145334_b391b90b_365545.png">
      </td>
-     <td align="right" valign="middle">
-        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145347_d0b90b1a_365545.png">
+     <td valign="middle">
+        <img width="100%" src="https://images.gitee.com/uploads/images/2019/1208/145347_d0b90b1a_365545.png">
      </td>
     </tr>
    <tr>
-     <td align="left" valign="middle">
-        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145400_7162464d_365545.png">
+     <td valign="middle">
+        <img width="100%" src="https://images.gitee.com/uploads/images/2019/1208/145400_7162464d_365545.png">
      </td>
-     <td align="right" valign="middle">
-        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145413_c10771ac_365545.png">
+     <td valign="middle">
+        <img width="100%" src="https://images.gitee.com/uploads/images/2019/1208/145413_c10771ac_365545.png">
      </td>
     </tr>
 </tbody>
