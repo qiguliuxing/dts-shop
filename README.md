@@ -26,11 +26,27 @@
 </table>
 
 ### 小程序演示图
+<table border="0">
+<tbody>
+   <tr>
+     <td align="left" valign="middle">
+        <img width="48%"  src="https://images.gitee.com/uploads/images/2019/1208/152014_7cff56d2_365545.jpeg">
+     </td>
+     <td align="right" valign="middle">
+        <img width="48%"  src="https://images.gitee.com/uploads/images/2019/1208/152027_bdf52faa_365545.jpeg">
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="middle">
+        <img width="48%"  src="https://images.gitee.com/uploads/images/2019/1208/152039_c8f7a7be_365545.jpeg">
+     </td>
+     <td align="right" valign="middle">
+        <img width="48%"  src="https://images.gitee.com/uploads/images/2019/1208/152053_89dd5153_365545.jpeg">
+     </td>
+    </tr>
+</tbody>
+</table>
 
-<img width="80%" height="80%" src="https://images.gitee.com/uploads/images/2019/1208/152014_7cff56d2_365545.jpeg">
-<img width="80%" height="80%" src="https://images.gitee.com/uploads/images/2019/1208/152027_bdf52faa_365545.jpeg">
-<img width="80%"  src="https://images.gitee.com/uploads/images/2019/1208/152039_c8f7a7be_365545.jpeg">
-<img width="80%"  src="https://images.gitee.com/uploads/images/2019/1208/152053_89dd5153_365545.jpeg">
 
 ### 管理后端演示图
 <table border="0">
