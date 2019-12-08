@@ -17,13 +17,12 @@
 				  <img height="250" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
 			</td>
 			<td align="right" valign="middle">
-				<img height="250" src="https://images.gitee.com/uploads/images/2019/1208/142050_9dd4d015_365545.png?raw=true">
-			</td>
+				<a href="https://jq.qq.com/?_wv=1027&k=5yH6R5E"><img height="250" src="https://images.gitee.com/uploads/images/2019/1208/142050_9dd4d015_365545.png?raw=true">
+			</td></a>
 		</tr>
 	</tbody>
 </table>
 
-![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/142050_9dd4d015_365545.png "qq二维码.png")
 
 ### 安装教程
 
