@@ -14,16 +14,16 @@
 	<tbody>
 		<tr>
 			<td align="left" valign="middle">
-				  <img height="120" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
+				  <img height="250" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
 			</td>
 			<td align="right" valign="middle">
-				<img height="120" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg?raw=true">
+				<img height="250" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg?raw=true">
 			</td>
 		</tr>
 	</tbody>
 </table>
 
-![输入图片说明](https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg "聚惠星小程序二维码.jpg")
+![聚惠星小程序二维码](https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg "聚惠星小程序二维码.jpg")
 
 ### 安装教程
 
