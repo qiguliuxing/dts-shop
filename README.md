@@ -17,13 +17,13 @@
 				  <img height="250" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
 			</td>
 			<td align="right" valign="middle">
-				<img height="250" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg?raw=true">
+				<img height="250" src="https://images.gitee.com/uploads/images/2019/1208/142050_9dd4d015_365545.png?raw=true">
 			</td>
 		</tr>
 	</tbody>
 </table>
 
-![聚惠星小程序二维码](https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg "聚惠星小程序二维码.jpg")
+![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/142050_9dd4d015_365545.png "qq二维码.png")
 
 ### 安装教程
 
