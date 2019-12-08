@@ -32,36 +32,30 @@
 <tbody>
    <tr>
      <td align="left" valign="middle">
-        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145307_557afa8a_365545.png">
+        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145307_557afa8a_365545.png">
      </td>
      <td align="right" valign="middle">
-        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145320_a5a47a3e_365545.png">
+        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145320_a5a47a3e_365545.png">
      </td>
     </tr>
     <tr>
      <td align="left" valign="middle">
-        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145334_b391b90b_365545.png">
+        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145334_b391b90b_365545.png">
      </td>
      <td align="right" valign="middle">
-        <img height="500" src="https://images.gitee.com/uploads/images/2019/1208/145347_d0b90b1a_365545.png">
+        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145347_d0b90b1a_365545.png">
      </td>
     </tr>
    <tr>
      <td align="left" valign="middle">
-        <img height="50%" src="https://images.gitee.com/uploads/images/2019/1208/145400_7162464d_365545.png">
+        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145400_7162464d_365545.png">
      </td>
      <td align="right" valign="middle">
-        <img height="50%" src="https://images.gitee.com/uploads/images/2019/1208/145413_c10771ac_365545.png">
+        <img height="45%" src="https://images.gitee.com/uploads/images/2019/1208/145413_c10771ac_365545.png">
      </td>
     </tr>
 </tbody>
 </table>
-![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145307_557afa8a_365545.png "1登录页面.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145320_a5a47a3e_365545.png "2后台管理-首页.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145334_b391b90b_365545.png "3商品上传.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145347_d0b90b1a_365545.png "4商品列表.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145400_7162464d_365545.png "5广告管理.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/1208/145413_c10771ac_365545.png "6订单管理.png")
 
 ### 安装教程
 
