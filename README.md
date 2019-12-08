@@ -14,7 +14,7 @@
 	<tbody>
 		<tr>
 			<td align="left" valign="middle">
-				  <img height="360" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
+				  <img height="120" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg">
 			</td>
 			<td align="right" valign="middle">
 				<img height="120" src="https://images.gitee.com/uploads/images/2019/1130/231510_d7ac1c17_365545.jpeg?raw=true">
