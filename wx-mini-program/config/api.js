@@ -92,7 +92,7 @@ module.exports = {
   CouponReceive: WxApiRoot + 'coupon/receive', //优惠券领取
   CouponReceiveAll: WxApiRoot + 'coupon/receiveAll', //优惠券领取
   CouponExchange: WxApiRoot + 'coupon/exchange', //优惠券兑换
-  GetUserCoupon:WxApiRoot + 'coupon/getUserCoupon',//用户个人可领取优惠券查询
+  GetUserCoupon: WxApiRoot + 'coupon/getUserCoupon',//用户个人可领取优惠券查询
 
   StorageUpload: WxApiRoot + 'storage/upload', //图片上传,
 
@@ -100,5 +100,7 @@ module.exports = {
   BrokerageMain: WxApiRoot + 'brokerage/main',//佣金收益主页面
   SettleOrderList: WxApiRoot + 'brokerage/settleOrderList',//佣金收益主页面
   ExtractList: WxApiRoot + 'brokerage/extractList',//佣金账号提现记录
-  ArticleDetail: WxApiRoot + 'article/detail' //公告详情
+  ArticleDetail: WxApiRoot + 'article/detail',//公告详情
+  ApplyAgency: WxApiRoot + 'user/applyAgency',//代理申请
+  GetSharedUrl: WxApiRoot + 'user/getSharedUrl' //获取推广二维码
 };

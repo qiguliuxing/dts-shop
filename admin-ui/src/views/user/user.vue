@@ -36,16 +36,47 @@
           <el-tag>{{ statusDic[scope.row.status] }}</el-tag>
         </template>
       </el-table-column>
+      <el-table-column align="center" label="操作" width="200" class-name="small-padding fixed-width">
+        <template slot-scope="scope">
+          <el-button v-permission="['GET /admin/user/detailApprove']" v-if="scope.row.status==0 && scope.row.userLevel==2" type="primary" @click="handleDetail(scope.row)">推广代理</el-button>
+          <el-button v-permission="['POST /admin/user/approveAgency']" v-else-if="scope.row.status==3" type="primary" size="mini" @click="handleApproveAgency(scope.row)">审批</el-button>
+          <el-button v-permission="['GET /admin/user/detailApprove']" v-else type="info" size="mini" >非代理</el-button>
+        </template>
+      </el-table-column>
 
     </el-table>
 
     <pagination v-show="total>0" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
 
+    <!-- 详情对话框 -->
+    <el-dialog :visible.sync="detailDialogVisible" title="代理详情" width="700">
+      <el-form :data="agencyDetail" label-position="left">
+        <el-form-item label="佣金比例(%)">
+          <span>{{ agencyDetail.settlementRate }}</span>
+        </el-form-item>
+        <el-form-item label="推广二维码">
+          <img :src="agencyDetail.shareUrl" width="300">
+        </el-form-item>
+      </el-form>
+    </el-dialog>
+    <!-- 代理审批 -->
+    <el-dialog :visible.sync="approveDialogVisible" title="代理审批">
+      <el-form ref="approveForm" :model="approveForm" status-icon label-position="left" label-width="100px" style="width: 400px; margin-left:50px;">
+        <el-form-item label="佣金比例(%)" prop="settlementRate">
+          <el-input v-model="approveForm.settlementRate"/>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="approveDialogVisible = false">取消</el-button>
+        <el-button type="primary" @click="confirmApprove">确定</el-button>
+      </div>
+    </el-dialog>
+
   </div>
 </template>
 
 <script>
-import { fetchList } from '@/api/user'
+import { fetchList, approveAgency, detailApprove } from '@/api/user'
 import Pagination from '@/components/Pagination' // Secondary package based on el-pagination
 
 export default {
@@ -66,8 +97,15 @@ export default {
       },
       downloadLoading: false,
       genderDic: ['未知', '男', '女'],
-      levelDic: ['普通用户', 'VIP用户', '高级VIP用户'],
-      statusDic: ['可用', '禁用', '注销']
+      levelDic: ['普通用户', 'VIP用户', '代理'],
+      statusDic: ['可用', '禁用', '注销', '代理申请'],
+      detailDialogVisible: false,
+      agencyDetail: {},
+      approveDialogVisible: false,
+      approveForm: {
+        userId: undefined,
+        settlementRate: undefined
+      }
     }
   },
   created() {
@@ -89,6 +127,43 @@ export default {
     handleFilter() {
       this.listQuery.page = 1
       this.getList()
+    },
+    handleDetail(row) {
+      this.agencyDetail = {
+        shareUrl: undefined,
+        settlementRate: undefined
+      }
+      detailApprove(row.id).then(response => {
+        this.agencyDetail = response.data.data
+      })
+      this.detailDialogVisible = true
+    },
+    handleApproveAgency(row) {
+      this.approveForm.userId = row.id
+
+      this.approveDialogVisible = true
+      this.$nextTick(() => {
+        this.$refs['approveForm'].clearValidate()
+      })
+    },
+    confirmApprove() {
+      this.$refs['approveForm'].validate((valid) => {
+        if (valid) {
+          approveAgency(this.approveForm).then(response => {
+            this.approveDialogVisible = false
+            this.$notify.success({
+              title: '成功',
+              message: '审批成功'
+            })
+            this.getList()
+          }).catch(response => {
+            this.$notify.error({
+              title: '审批失败',
+              message: response.data.errmsg
+            })
+          })
+        }
+      })
     },
     handleDownload() {
       this.downloadLoading = true

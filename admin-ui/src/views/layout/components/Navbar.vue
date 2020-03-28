@@ -34,12 +34,12 @@
             </el-dropdown-item>
           </router-link>
           <el-dropdown-item divided>
-            <a target="_blank" href="https://gitee.com/qiguliuxing/dts-shop">
+            <a target="_blank" href="https://github.com/linlinjava/litemall">
               GitHub
             </a>
           </el-dropdown-item>
           <el-dropdown-item>
-            <a target="_blank" href="https://gitee.com/qiguliuxing/dts-shop">
+            <a target="_blank" href="https://gitee.com/linlinjava/litemall">
               码云
             </a>
           </el-dropdown-item>

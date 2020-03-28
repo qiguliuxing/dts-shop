@@ -16,6 +16,7 @@
 .user .wrapper .nav .item~.item{border-left:1px solid #eee;}
 .user .wrapper .nav .item .title{font-size:28rpx;color:#666;}
 .user .wrapper .nav .item .num{margin-top:16rpx;font-size:36rpx;color:rgb(223, 8, 8);}
+.user .wrapper .nav .item .text{margin-top:16rpx;font-size:30rpx;}
 .user .wrapper .myOrder{background-color:#fff;border-radius:10rpx;margin-top:15rpx;}
 .user .wrapper .myOrder .title,.user .wrapper .myService .title{height:88rpx;padding:0 30rpx;border-bottom:1px dashed #ddd;font-size:30rpx;color:#282828;}
 .user .wrapper .myOrder .title .allOrder{font-size:26rpx;color:#666;}
@@ -36,6 +37,7 @@
   position: absolute;
   background: #b4282d;
   color: #fff;
+  font-size: 28rpx;
   border-radius: 50%;
   margin-top: 0rpx;
   margin-left: 40rpx;

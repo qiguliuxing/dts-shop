@@ -97,6 +97,9 @@ Page({
           url: '../goods/goods?grouponId=' + id
         });
       } else {
+    	if (id != null){
+    		wx.setStorageSync('shareUserId', id);
+    	}
         wx.navigateTo({
           url: '../index/index'
         });

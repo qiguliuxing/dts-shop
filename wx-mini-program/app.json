@@ -5,6 +5,7 @@
     "pages/newGoods/newGoods",
     "pages/hotGoods/hotGoods",
     "pages/ucenter/index/index",
+    "pages/ucenter/main/index",
     "pages/ucenter/address/address",
     "pages/ucenter/addressAdd/addressAdd",
     "pages/ucenter/feedback/feedback",
@@ -49,13 +50,13 @@
     "lib/home/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#85c43f",
-    "navigationBarTitleText": "聚惠星",
-    "enablePullDownRefresh": true,
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#FFFFFF",
-    "backgroundTextStyle": "dark"
-  },
+  "navigationBarBackgroundColor": "#85c43f",
+  "navigationBarTitleText": "聚惠星",
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#FFFFFF",
+  "backgroundTextStyle": "dark"
+},
   "tabBar": {
     "backgroundColor": "#fafafa",
     "borderStyle": "white",

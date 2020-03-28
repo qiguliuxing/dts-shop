@@ -11,7 +11,8 @@ Page({
     scrollTop: 0,
     scrollHeight: 0,
     page: 1,
-    size: 500
+    size: 10,
+    totalPages: 1
   },
   onLoad: function(options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -100,7 +101,8 @@ Page({
       })
       .then(function(res) {
         that.setData({
-          goodsList: res.data.goodsList,
+          goodsList: that.data.goodsList.concat(res.data.goodsList),
+          totalPages: res.data.totalPages
         });
       });
   },
@@ -124,9 +126,27 @@ Page({
       });
     }
     this.setData({
-      id: event.currentTarget.dataset.id
+      id: event.currentTarget.dataset.id,
+      goodsList: [],
+      page: 1,
+      totalPages: 1
     });
 
     this.getCategoryInfo();
-  }
+  }, 
+  onReachBottom:function() {
+	if (this.data.totalPages > this.data.page) {
+	   this.setData({
+	     page: this.data.page + 1
+	   });
+	} else {
+	   wx.showToast({
+	         title: '已经到底了!',
+	         icon: 'none',
+	         duration: 2000
+	   });
+	   return false;
+	}
+    this.getGoodsList();
+   }
 })

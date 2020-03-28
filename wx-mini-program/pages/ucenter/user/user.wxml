@@ -19,6 +19,22 @@
             <text class='iconfont icon-suozi'></text>
           </view>
         </view>
+        
+        <view class='item acea-row row-between-wrapper'>
+          <view>代理申请</view>
+          <view class='input acea-row row-between-wrapper' wx:if="{{userInfo.userLevel==2}}">
+            <input type='text' disabled='true'  value='{{userInfo.userLevelDesc}}' class='id'></input>
+            <text class='iconfont icon-huangguan'></text>
+          </view>
+          <view class='input acea-row row-between-wrapper' wx:elif="{{userInfo.status == 3}}">
+            <input type='text' disabled='true'  value='代理申请中，请耐心等待管理员审批...' class='id'></input>
+            <text class='iconfont icon-huangguan'></text>
+          </view>
+          <button name='phone' class='phone'  wx:else  hover-class='none'  bindtap="applyAgency" >
+             点击申请
+          </button>
+        </view>
+        
         <view class='item acea-row row-between-wrapper'>
           <view>ID号</view>
           <view class='input acea-row row-between-wrapper'>
@@ -26,6 +42,9 @@
             <text class='iconfont icon-suozi'></text>
           </view> 
         </view>
+    </view>
+    <view wx:if="{{userSharedUrl && userSharedUrl!=''}}" style="text-align:center;background-color:#fff;">
+      <image class="img" src="{{userSharedUrl}}" style="width:600rpx;height:600rpx;"></image>
     </view>
     <button class='modifyBnt' bindtap="exitLogin">退 出</button>
   </view>

@@ -17,8 +17,9 @@ Page({
     defaultKeyword: {},
     hotKeyword: [],
     page: 1,
-    size: 20,
-    categoryId: 0
+    size: 10,
+    categoryId: 0,
+    totalPages: 1
   },
   //事件处理函数
   closeSearch: function() {
@@ -104,8 +105,9 @@ Page({
         that.setData({
           searchStatus: true,
           categoryFilter: false,
-          goodsList: res.data.goodsList,
-          filterCategory: res.data.filterCategoryList
+          goodsList: that.data.goodsList.concat(res.data.goodsList),
+          filterCategory: res.data.filterCategoryList,
+          totalPages: res.data.totalPages
         });
       }
 
@@ -125,6 +127,7 @@ Page({
     this.setData({
       keyword: keyword,
       page: 1,
+      totalPages: 1,
       categoryId: 0,
       goodsList: []
     });
@@ -185,11 +188,27 @@ Page({
       categoryFilter: false,
       categoryId: currentCategory.id,
       page: 1,
+      totalPages: 1,
       goodsList: []
     });
     this.getGoodsList();
   },
   onKeywordConfirm(event) {
     this.getSearchResult(event.detail.value);
-  }
+  }, 
+  onReachBottom:function() {
+	if (this.data.totalPages > this.data.page) {
+	   this.setData({
+	     page: this.data.page + 1
+	   });
+	} else {
+	   wx.showToast({
+	         title: '已经到底了!',
+	         icon: 'none',
+	         duration: 2000
+	   });
+	   return false;
+	}
+    this.getGoodsList();
+   }
 })

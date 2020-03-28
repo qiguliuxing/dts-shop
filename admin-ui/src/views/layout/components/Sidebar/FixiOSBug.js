@@ -6,6 +6,7 @@ export default {
   },
   mounted() {
     // In order to fix the click on menu on the ios device will trigger the mouseeleave bug
+    // https://github.com/PanJiaChen/vue-element-admin/issues/1135
     this.fixBugIniOS()
   },
   methods: {

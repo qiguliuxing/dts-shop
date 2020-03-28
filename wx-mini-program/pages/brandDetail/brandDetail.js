@@ -10,7 +10,8 @@ Page({
     brand: {},
     goodsList: [],
     page: 1,
-    size: 200
+    size: 10,
+    totalPages: 1
   },
   onLoad: function(options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -45,7 +46,8 @@ Page({
       .then(function(res) {
         if (res.errno === 0) {
           that.setData({
-            goodsList: res.data.goodsList
+            goodsList: that.data.goodsList.concat(res.data.goodsList),
+            totalPages: res.data.totalPages
           });
         }
       });
@@ -65,5 +67,20 @@ Page({
   onUnload: function() {
     // 页面关闭
 
-  }
+  }, 
+  onReachBottom:function() {
+	if (this.data.totalPages > this.data.page) {
+		this.setData({
+		  page: this.data.page + 1
+		});
+	} else {
+		wx.showToast({
+		  title: '已经到底了!',
+		  icon: 'none',
+		  duration: 2000
+		});
+		return false;
+	}
+	 this.getGoodsList();
+   }
 })

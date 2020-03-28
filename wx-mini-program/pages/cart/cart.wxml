@@ -9,7 +9,7 @@
     <view class="service-policy">
       <view class="item">全场优惠券抵扣</view>
       <view class="item">7天无忧快速退货</view>
-      <view class="item">满66元免邮费</view>
+      <view class="item">满40元免邮费</view>
     </view>
     <view class="no-cart" wx:if="{{cartGoods.length <= 0 && brandCartgoods.length <=0 }}">
       <view class="c">

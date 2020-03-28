@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 22,
+			"current": 38,
 			"list": [
 				{
 					"id": -1,
@@ -269,6 +269,13 @@
 					"name": "优惠券列表",
 					"pathName": "pages/coupon/coupon",
 					"query": ""
+				},
+				{
+					"id": 38,
+					"name": "QcCode",
+					"pathName": "pages/index/index",
+					"query": "shareUserId=100",
+					"scene": 1011
 				}
 			]
 		}

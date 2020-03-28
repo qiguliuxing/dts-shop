@@ -16,7 +16,8 @@ Page({
     currentSort: 'add_time',
     currentSortOrder: 'desc',
     page: 1,
-    size: 200
+    size: 10,
+    totalPages: 1
   },
   getGoodsList: function() {
     var that = this;
@@ -32,8 +33,9 @@ Page({
       .then(function(res) {
         if (res.errno === 0) {
           that.setData({
-            goodsList: res.data.goodsList,
-            filterCategory: res.data.filterCategoryList
+            goodsList: that.data.goodsList.concat(res.data.goodsList),
+            filterCategory: res.data.filterCategoryList,
+            totalPages: res.data.totalPages
           });
         }
       });
@@ -113,6 +115,20 @@ Page({
       'categoryId': this.data.filterCategory[currentIndex].id
     });
     this.getGoodsList();
-
+  }, 
+  onReachBottom:function() {
+	if (this.data.totalPages > this.data.page) {
+	    this.setData({
+		    page: this.data.page + 1
+		});
+	} else {
+		wx.showToast({
+		    title: '已经到底了!',
+			icon: 'none',
+			duration: 2000
+		});
+		return false;
+	}
+	this.getGoodsList();
   }
 })

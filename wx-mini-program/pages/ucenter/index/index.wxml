@@ -13,17 +13,26 @@
    </view>
    <view class='wrapper'>
       <view class='nav acea-row row-middle'>
-         <view class='item' hover-class='none' bindtap="goBrokerage">
+         <view class='item' hover-class='none' wx:if="{{userInfo.userLevel==2}}" bindtap="goBrokerage">
             <view class='title'>当前佣金</view>
-            <view class='num'>¥ {{remainAmount || 0.00}}</view>
+            <view class='text'><text class='iconfont icon-jinbi1' style="color:#FF654B;margin-right:8rpx;"></text> {{remainAmount || 0.00}}</view>
          </view>
-         <view class='item' hover-class='none' bindtap="goBrokerage">
+         <view class='item' hover-class='none' wx:else>
+            <view class='title'>用户类型</view>
+            <view class='text'><text class='iconfont icon-jingyanzhi' style="color:#FF654B;margin-right:8rpx;"></text>
+            {{userInfo.userLevelDesc || "普通会员"}}</view>
+         </view>
+         <view class='item' hover-class='none' wx:if="{{userInfo.userLevel==2}}" bindtap="goBrokerage">
             <view class='title'>总收益</view>
-            <view class='num'>¥ {{totalAmount || 0}}</view>
+            <view class='text'><text class='iconfont icon-qiandai' style="color:#FF654B;margin-right:8rpx;"></text>  {{totalAmount || 0}}</view>
+         </view>
+         <view class='item' hover-class='none' wx:else>
+            <view class='title'>注册时间</view>
+            <view class='text'><text class='iconfont icon-shenhezhong' style="color:#FF654B;margin-right:8rpx;"></text>{{userInfo.registerDate || "2019-10-01"}}</view>
          </view>
          <view class='item' hover-class='none' bindtap='goPages' data-url='/pages/ucenter/couponList/couponList'>
             <view class='title'>优惠券</view>
-            <view class='num'>{{couponCount || 0}}</view>
+            <view class='text'><text class='iconfont icon-youhuiquan' style="color:#FF654B;margin-right:8rpx;"></text>{{couponCount || 0}}</view>
          </view>
       </view>
       <view class='myOrder'>
