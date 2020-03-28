@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiguliuxing.dts.db.dao.ex.AccountMapperEx">
+
+ <resultMap id="BaseResultMap" type="com.qiguliuxing.dts.db.domain.DtsOrder">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="order_sn" jdbcType="VARCHAR" property="orderSn" />
+    <result column="order_status" jdbcType="SMALLINT" property="orderStatus" />
+    <result column="consignee" jdbcType="VARCHAR" property="consignee" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="message" jdbcType="VARCHAR" property="message" />
+    <result column="goods_price" jdbcType="DECIMAL" property="goodsPrice" />
+    <result column="freight_price" jdbcType="DECIMAL" property="freightPrice" />
+    <result column="coupon_price" jdbcType="DECIMAL" property="couponPrice" />
+    <result column="integral_price" jdbcType="DECIMAL" property="integralPrice" />
+    <result column="groupon_price" jdbcType="DECIMAL" property="grouponPrice" />
+    <result column="order_price" jdbcType="DECIMAL" property="orderPrice" />
+    <result column="actual_price" jdbcType="DECIMAL" property="actualPrice" />
+    <result column="pay_id" jdbcType="VARCHAR" property="payId" />
+    <result column="pay_time" jdbcType="TIMESTAMP" property="payTime" />
+    <result column="ship_sn" jdbcType="VARCHAR" property="shipSn" />
+    <result column="ship_channel" jdbcType="VARCHAR" property="shipChannel" />
+    <result column="ship_time" jdbcType="TIMESTAMP" property="shipTime" />
+    <result column="confirm_time" jdbcType="TIMESTAMP" property="confirmTime" />
+    <result column="comments" jdbcType="SMALLINT" property="comments" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+    <result column="settlement_money" jdbcType="DECIMAL" property="settlementMoney" />
+    <result column="settlement_status" jdbcType="BIT" property="settlementStatus" />
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+    id, user_id, order_sn, order_status, consignee, mobile, address, message, goods_price, 
+    freight_price, coupon_price, integral_price, groupon_price, order_price, actual_price, 
+    pay_id, pay_time, ship_sn, ship_channel, ship_time, confirm_time, comments, end_time, 
+    add_time, update_time, deleted, settlement_money, settlement_status
+  </sql>
+
+    <select id="getShareUserId" resultType="java.lang.Integer" >
+       select distinct share_user_id from dts_user t where t.deleted = 0 and t.share_user_id > 0
+    </select>
+    
+    <select id="getLastMonthSettleMoney" resultType="java.math.BigDecimal" parameterType="map">
+       select sum(t.settlement_money) as total_settlement_money from dts_order t 
+				 where t.deleted = 0 and t.order_status in (401,402) and t.settlement_status = 0 
+				 and t.confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s') 
+				 and t.confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')   
+				 and t.user_id in (select id  
+        from dts_user u where  u.share_user_id = #{sharedUserId,jdbcType=INTEGER}) 
+    </select>
+    
+    <select id="setLastMonthOrderSettleStaus" resultType="java.math.BigDecimal" parameterType="map">
+       update dts_order t set settlement_status = 1 
+				 where t.deleted = 0 and t.order_status in (401,402)
+				 and t.confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s') 
+				 and t.confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')   
+				 and t.user_id in (select id  
+        from dts_user u where  u.share_user_id = #{sharedUserId,jdbcType=INTEGER}) 
+    </select>
+    
+    <select id="staticMonthSettleMoney" resultType="java.math.BigDecimal" parameterType="map">
+       select sum(t.settlement_money)  as total_settlement_money from dts_order t 
+				 where t.deleted = 0 and t.order_status in (401,402)
+				 and t.confirm_time &gt;= STR_TO_DATE(#{startTime},'%Y-%m-%d %H:%i:%s') 
+				 and t.confirm_time &lt;= STR_TO_DATE(#{endTime},'%Y-%m-%d %H:%i:%s')   
+				 and t.user_id in (select id  
+        from dts_user u where  u.share_user_id = #{sharedUserId,jdbcType=INTEGER}) 
+    </select>
+    
+   <select id="countOrderSharedUser" resultType="java.lang.Long" parameterType="map">
+       select count(1) as cnt from dts_order t 
+				 where t.deleted = 0 
+				 and t.pay_time &gt;= #{startTime,jdbcType=TIMESTAMP}  
+				 and t.user_id in (select id  
+        from dts_user u where  u.share_user_id = #{sharedUserId,jdbcType=INTEGER}) 
+   </select>
+   
+   <select id="sumOrderSettleAmtSharedUser" resultType="java.math.BigDecimal" parameterType="map">
+       select sum(t.settlement_money) as total_settlement_money from dts_order t 
+				 where t.deleted = 0 
+				 and t.pay_time &gt;= #{startTime,jdbcType=TIMESTAMP}  
+				 and t.user_id in (select id  
+        from dts_user u where  u.share_user_id = #{sharedUserId,jdbcType=INTEGER}) 
+   </select>
+   
+   <select id="querySettlementOrder" resultMap="BaseResultMap" parameterType="map">
+       select distinct  
+       <include refid="Base_Column_List" />
+        from dts_order o where o.deleted = 0 
+		<if test="conditionSql != null and conditionSql != ''">
+            ${conditionSql} 
+        </if>	 
+		and o.user_id in (select id  
+        from dts_user u where  u.share_user_id = #{sharedUserId,jdbcType=INTEGER}) 
+        order by o.add_time desc
+   </select>
+    
+</mapper>
