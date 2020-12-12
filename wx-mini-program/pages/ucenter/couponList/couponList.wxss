@@ -1,0 +1,204 @@
+page {
+  background: #f4f4f4;
+  min-height: 100%;
+}
+
+.container {
+  background: #f4f4f4;
+  min-height: 100%;
+  padding-top: 30rpx;
+}
+
+.container .h {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  height: 84rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.container .h .item {
+  display: inline-block;
+  height: 82rpx;
+  width: 50%;
+  padding: 0 15rpx;
+  text-align: center;
+}
+
+.container .h .item .txt {
+  display: inline-block;
+  height: 82rpx;
+  padding: 0 20rpx;
+  line-height: 82rpx;
+  color: #333;
+  font-size: 30rpx;
+  width: 170rpx;
+}
+
+.container .h .item.active .txt {
+  color: #ab2b2b;
+  border-bottom: 4rpx solid #ab2b2b;
+}
+
+.coupon-list {
+  width: 710rpx;
+  height: auto;
+  margin-top: 68rpx;
+  overflow: hidden;
+}
+
+.coupon-list .item {
+  position: relative;
+  height: 200rpx;
+  width: 680rpx;
+  background: linear-gradient(to right, #d8050f, #e68d08);
+  margin: 18rpx;
+  overflow:hidden;
+  border-radius: 10rpx;
+}
+
+.coupon-list .item:before, .item:after {
+  content: '.';
+  width: 0;
+  height: 200%;
+  position: absolute;
+  top: 20rpx;
+} 
+
+.coupon-list .item:before {
+  border-right: 20rpx dotted #eeeeee;
+  left: -10rpx;
+  width: 1rpx;
+}
+
+.coupon-list .item:after {
+  border-left: 20rpx dotted #eeeeee;
+  right: -10rpx;
+}
+
+
+.coupon-list .tag {
+  margin-left: 40rpx;
+  height: 32rpx;
+  background: #b8bb12;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  position: absolute;
+  left: 20rpx;
+  color: #fff;
+  top: 20rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 32rpx;
+}
+
+.coupon-list .content {
+  margin-left: 30rpx;
+  display: flex;
+  margin-right: 40rpx;
+  flex-direction: row;
+}
+
+.coupon-list .content .left {
+  padding-top: 50rpx; 
+  flex: 1;
+  border-right: 2rpx dashed rgba(230,230,230,.5);
+}
+
+.coupon-list .discount {
+  font-size: 50rpx;
+  color: #e9f814;
+}
+
+.coupon-list .min {
+  color: #fff;
+}
+
+.coupon-list .content .right {
+  padding: 11px 8px;
+  width: 410rpx;
+}
+
+.coupon-list .name {
+  font-size: 44rpx;
+  color: #fff;
+  margin-bottom: 14rpx;
+}
+
+.coupon-list .desc {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.coupon-list .time {
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 30rpx;
+}
+
+.coupon-list .couponbg{
+  position: absolute;
+  left: 20%;
+  top: 95rpx;
+  height: 290rpx;
+  width: 730rpx;
+  background-color: rgba(255,255,255,.15);
+  transform: rotate(-20deg);
+}
+
+.condition {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 78rpx;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 24rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+ .condition .txt {
+  display: block;
+  height: 30rpx;
+  flex: 1;
+  overflow: hidden;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #fff;
+}
+
+.condition .icon {
+  margin-left: 30rpx;
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.page {
+  width: 750rpx;
+  height: 108rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.page view {
+  height: 108rpx;
+  width: 50%;
+  float: left;
+  font-size: 29rpx;
+  color: #333;
+  text-align: center;
+  line-height: 108rpx;
+}
+
+.page .prev {
+  border-right: 1px solid #d9d9d9;
+}
+
+.page .disabled {
+  color: #ccc;
+}

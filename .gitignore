@@ -1,0 +1,41 @@
+.DS_Store
+HELP.md
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/
+
+### uniapp ###
+unpackage/
+
+### JAVA ###
+*.class
+*.jar
+*.war
+!.mvn/wrapper/maven-wrapper.jar
+*.ear
+
+### nuoquan ###
+!ueditor-1.1.2.jar

@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="form-box">
+    <view class="form-item">
+      <view class="amt">提现金额：{{amt}} 元</view>
+    </view>
+    <view class="form-item">
+      <view class="mobile" wx:if="{{mobile && mobile != ''}}">绑定手机号：{{mobile}}</view>
+      <view class="mobile" wx:else>请去设置页面绑定手机</view>
+    </view>
+
+    <view class="form-item-code">
+      <view class="form-item code-item">
+        <input class="code" value="{{code}}" bindinput="bindCodeInput" placeholder="验证码" />
+        <image class="clear" id="clear-code" wx:if="{{ code.length > 0 }}" src="/static/images/clear_input.png" catchtap="clearInput"></image>
+      </view>
+      <view class="code-btn" bindtap="sendCode">获取验证码</view>
+    </view>
+
+    <button type="primary" class="register-btn" bindtap="goWithdrawal">发起申请</button>
+
+  </view>
+</view>

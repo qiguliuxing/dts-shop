@@ -1,0 +1,17 @@
+<view class='coupon-window {{window==true?"on":""}}'>
+   <view class='couponWinList'>
+      <view class='item acea-row row-between-wrapper' wx:for="{{couponList}}" wx:key>
+         <view class='money font-color'>￥<text class='num'>{{item.discount}}</text></view>
+         <view class='text'>
+            <view class='name'>【{{item.desc}}】购物买{{item.min}}减{{item.discount}}</view>
+            <view wx:if="{{item.days != 0}}">有效期：{{item.days}}天</view>
+            <view wx:else>{{item.startTime}}-{{item.endTime}}</view>
+         </view>
+      </view>
+   </view>
+   <view class='lid'>
+      <view hover-class='none' bindtap='getAllCoupon' class='bnt font-color'>立即领取</view>
+      <view class='iconfont icon-guanbi3' bindtap='close'></view>
+   </view>
+</view>
+<view class='mask' catchtouchmove="true" hidden='{{window==false}}'></view>

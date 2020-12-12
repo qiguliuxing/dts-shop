@@ -1,0 +1,93 @@
+<view class='user'>
+   <view class='header bg-color acea-row row-between-wrapper'>
+      <view class='picTxt acea-row row-between-wrapper' bindtap="goLogin">
+         <view class='pictrue'><image src='{{userInfo.avatarUrl}}'></image></view>
+         <view class='text'>
+            <view class='acea-row row-middle'>
+               <view class='name line1'>{{userInfo.nickName || '请授权'}}</view>
+            </view>
+            <view class='id'>用户编号：1000{{userInfo.userId || 0}}</view>
+         </view>
+      </view>
+      <text class='iconfont icon-shezhi' bindtap='goPages' data-url='/pages/ucenter/user/user'></text>
+   </view>
+   <view class='wrapper'>
+      <view class='nav acea-row row-middle'>
+         <view class='item' hover-class='none' wx:if="{{userInfo.userLevel==2}}" bindtap="goBrokerage">
+            <view class='title'>当前佣金</view>
+            <view class='text'><text class='iconfont icon-jinbi1' style="color:#FF654B;margin-right:8rpx;"></text> {{remainAmount || 0.00}}</view>
+         </view>
+         <view class='item' hover-class='none' wx:else>
+            <view class='title'>用户类型</view>
+            <view class='text'><text class='iconfont icon-jingyanzhi' style="color:#FF654B;margin-right:8rpx;"></text>
+            {{userInfo.userLevelDesc || "普通会员"}}</view>
+         </view>
+         <view class='item' hover-class='none' wx:if="{{userInfo.userLevel==2}}" bindtap="goBrokerage">
+            <view class='title'>总收益</view>
+            <view class='text'><text class='iconfont icon-qiandai' style="color:#FF654B;margin-right:8rpx;"></text>  {{totalAmount || 0}}</view>
+         </view>
+         <view class='item' hover-class='none' wx:else>
+            <view class='title'>注册时间</view>
+            <view class='text'><text class='iconfont icon-shenhezhong' style="color:#FF654B;margin-right:8rpx;"></text>{{userInfo.registerDate || "2019-10-01"}}</view>
+         </view>
+         <view class='item' hover-class='none' bindtap='goPages' data-url='/pages/ucenter/couponList/couponList'>
+            <view class='title'>优惠券</view>
+            <view class='text'><text class='iconfont icon-youhuiquan' style="color:#FF654B;margin-right:8rpx;"></text>{{couponCount || 0}}</view>
+         </view>
+      </view>
+      <view class='myOrder'>
+        <view class='title acea-row row-between-wrapper'>
+           <view class='jhx_f4'>我的订单</view>
+           <view class='allOrder jhx_f6' hover-class='none' bindtap='goOrder'>全部订单<text class='iconfont icon-jiantou'></text></view>
+        </view>
+        <view class='orderState acea-row row-middle'>
+           <view class='item' hover-class='none' bindtap='goOrderIndex' data-index='1' data-route='/pages/ucenter/order/order'>
+              <view class='pictrue'>
+              <text class="item_badge" wx:if="{{order.unpaid != 0}}">{{order.unpaid}}</text>
+              <image src='/static/images/dfk.png'></image>
+              </view>
+              <view class='jhx_f2'>待付款</view>
+           </view>
+            <view class='item' hover-class='none'  bindtap='goOrderIndex' data-index='2' data-route='/pages/ucenter/order/order'>
+              <view class='pictrue'>
+                <text class="item_badge" wx:if="{{order.unship != 0}}">{{order.unship}}</text>
+                <image src='/static/images/dfh.png'></image>
+              </view>
+              <view class='jhx_f2'>待发货</view>
+           </view>
+            <view class='item' hover-class='none'  bindtap='goOrderIndex' data-index='3' data-route='/pages/ucenter/order/order'>
+              <view class='pictrue'>
+              <text class="item_badge" wx:if="{{order.unrecv != 0}}">{{order.unrecv}}</text>
+              <image src='/static/images/dsh.png'></image>
+              </view>
+              <view class='jhx_f2'>待收货</view>
+           </view>
+            <view class='item' hover-class='none'  bindtap='goOrderIndex' data-index='4' data-route='/pages/ucenter/order/order'>
+              <view class='pictrue'>
+              <text class="item_badge" wx:if="{{order.uncomment != 0}}">{{order.uncomment}}</text>
+              <image src='/static/images/dpj.png'></image>
+              </view>
+              <view class='jhx_f2'>待评价</view>
+           </view>
+            <view class='item' hover-class='none' bindtap='goOrder'>
+              <view class='pictrue'><image src='/static/images/sh.png'></image></view>
+              <view class='jhx_f2'>所有订单</view>
+           </view>
+        </view>
+      </view>
+      <view class='myService'>
+         <view class='title acea-row row-middle jhx_f4'>我的服务</view>
+         <view class='serviceList acea-row row-middle'>
+            <view class='item' wx:for="{{MyMenus}}" wx:key bindtap='goPages' data-url='{{item.url}}' wx:if="{{item.url!='#'}}">
+              <view class='pictrue'><image src='/static/images/{{item.pic}}'></image></view>
+              <view class='jhx_f2'>{{item.name}}</view>
+            </view>
+            <button class='item' open-type='contact' hover-class='none'>
+              <view class='pictrue'><image src='/static/images/customer.png'></image></view>
+              <view class='jhx_f2'>联系客服</view>
+            </button>
+         </view>
+      </view>
+   </view>
+</view>
+<authorize bind:onLoadFun='onLoadFun'></authorize>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "zan-capsule": "../../lib/zanui-weapp/capsule/index",
+    "coupon-window": "../../lib/coupon-window/index",
+    "home": "../../lib/home/index"
+  }
+}

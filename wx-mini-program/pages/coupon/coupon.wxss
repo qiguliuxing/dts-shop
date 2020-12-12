@@ -1,0 +1,171 @@
+page {
+  background: #f4f4f4;
+  min-height: 100%;
+}
+
+.container {
+  background: #f4f4f4;
+  min-height: 100%;
+  padding-top: 30rpx;
+}
+
+.coupon-list {
+  width: 680rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.item {
+  position: relative;
+  height: 250rpx;
+  width: 600rpx;
+  background: linear-gradient(to right, #d8050f, #e68d08);
+  margin-bottom: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+  overflow:hidden;
+  border-radius: 10rpx;
+}
+
+.item:before, .item:after {
+  content: '.';
+  width: 0;
+  height: 200%;
+  position: absolute;
+  top: 20rpx;
+} 
+
+.item:before {
+  border-right: 20rpx dotted #eeeeee;
+  left: -10rpx;
+  width: 1rpx;
+}
+
+.item:after {
+  border-left: 20rpx dotted #eeeeee;
+  right: -10rpx;
+}
+
+
+.tag {
+  margin-left: 40rpx;
+  height: 32rpx;
+  background: #b8bb12;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  position: absolute;
+  left: 20rpx;
+  color: #fff;
+  top: 20rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 32rpx;
+}
+
+.content {
+  margin-left: 30rpx;
+  display: flex;
+  margin-right: 40rpx;
+  flex-direction: row;
+}
+
+.content .left {
+  padding-top: 50rpx; 
+  flex: 1;
+  border-right: 2rpx dashed rgba(230,230,230,.5);
+}
+
+.discount {
+  font-size: 50rpx;
+  color: #e9f814;
+}
+
+.min {
+  color: #fff;
+}
+
+.content .right {
+  padding: 11px 14px;
+  width: 440rpx;
+}
+
+.name {
+  font-size: 44rpx;
+  color: #fff;
+  margin-bottom: 14rpx;
+}
+
+.desc {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.time {
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 30rpx;
+}
+
+.couponbg{
+  position: absolute;
+  left: 20%;
+  top: 95rpx;
+  height: 290rpx;
+  width: 730rpx;
+  background-color: rgba(255,255,255,.15);
+  transform: rotate(-20deg);
+}
+
+.condition {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 78rpx;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 24rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.condition .txt {
+  display: block;
+  height: 30rpx;
+  flex: 1;
+  overflow: hidden;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: #fff;
+}
+
+.condition .icon {
+  margin-left: 30rpx;
+  width: 24rpx;
+  height: 24rpx;
+}
+
+
+.page {
+  width: 750rpx;
+  height: 108rpx;
+  background: #fff;
+  margin-bottom: 10rpx;
+}
+
+.page view {
+  height: 108rpx;
+  width: 50%;
+  float: left;
+  font-size: 29rpx;
+  color: #333;
+  text-align: center;
+  line-height: 108rpx;
+}
+
+.page .prev {
+  border-right: 1px solid #d9d9d9;
+}
+
+.page .disabled {
+  color: #ccc;
+}

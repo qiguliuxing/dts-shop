@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="address-list" wx:if="{{ accountTraceList.length > 0 }}">
+    <view class="item" wx:for="{{accountTraceList}}" wx:key="id"  data-address-id="{{item.id}}">
+      <view class="l">
+        <view class="name">{{item.amount}}</view>
+        <view class="default" wx:if="{{item.type == 1}}">提现中</view>
+        <view class="default" wx:if="{{item.type == 2}}">已提现</view>
+        <view class="default" wx:if="{{item.type == 0}}">月结</view>
+      </view>
+      <view class="c">
+        <view class="mobile" wx:if="{{item.type == 1}}">{{item.mobile}}</view>
+        <view class="mobile" wx:if="{{item.type == 0}}">系统</view>
+        <view class="address">时间：{{item.traceTime}}</view>
+      </view>
+      <view class="r">
+        <view class="del">余额：{{item.remainAmount}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="empty-view" wx:if="{{ recordList.length <= 0 }}">
+    <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png"></image>
+    <text class="text">您尚未有提现记录，努力加油推广吧!</text>
+  </view>
+</view>

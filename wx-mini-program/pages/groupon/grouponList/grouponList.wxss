@@ -1,0 +1,110 @@
+page, .container {
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.groupon-list {
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.groupon-list .item {
+  height: 244rpx;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.groupon-list .img {
+  margin-top: 12rpx;
+  margin-right: 10rpx;
+  float: left;
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.groupon-list .right {
+  float: left;
+  height: 244rpx;
+  width: 476rpx;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.groupon-list .text {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  height: 244rpx;
+  width: 476rpx;
+}
+
+.groupon-list .name {
+  float: left;
+  width: 330rpx;
+  display: block;
+  line-height: 42rpx;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp: 2;
+ overflow: hidden;
+}
+
+.groupon-list .capsule-tag {
+  float: right;
+  padding-right: 0rpx;
+  padding-top: 8rpx;
+}
+
+.groupon-list .zan-capsule + .zan-capsule {
+  margin-left: 6px;
+}
+
+.groupon-list .desc {
+  margin-top: 20rpx;
+  width: 476rpx;
+  display: block;
+  line-height: 38rpx;
+}
+
+.groupon-list .price {
+  width: 476rpx;
+  display: flex;
+  line-height: 50rpx;
+}
+
+.groupon-list .counterPrice {
+  margin-left: 30rpx;
+  text-decoration: line-through;
+}
+
+.page {
+  width: 750rpx;
+  height: 108rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.page view {
+  height: 108rpx;
+  width: 50%;
+  float: left;
+  font-size: 29rpx;
+  color: #333;
+  text-align: center;
+  line-height: 108rpx;
+}
+
+.page .prev {
+  border-right: 1px solid #d9d9d9;
+}
+
+.page .disabled {
+  color: #ccc;
+}
