@@ -41,14 +41,6 @@ public class ShiroConfig {
 		ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 		shiroFilterFactoryBean.setSecurityManager(securityManager);
 		Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
-
-		// swagger接口权限 开放
-//		filterChainDefinitionMap.put("/swagger-ui.html", "anon");
-//		filterChainDefinitionMap.put("/webjars/**", "anon");
-//		filterChainDefinitionMap.put("/v2/**", "anon");
-//		filterChainDefinitionMap.put("/swagger-resources/**", "anon");
-
-		// 认证登陆页面
 		filterChainDefinitionMap.put("/admin/auth/login", "anon");
 		filterChainDefinitionMap.put("/admin/auth/401", "anon");
 		filterChainDefinitionMap.put("/admin/auth/index", "anon");
