@@ -10,9 +10,9 @@ spring:
       location: /tmp/tomcat_upload
       
 server:
-  port: 8070
+  port: 8084
   servlet:
-    context-path: /demo
+    context-path: /
 
 logging:
   level:

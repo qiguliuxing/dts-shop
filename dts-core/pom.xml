@@ -76,18 +76,28 @@
             <groupId>com.github.binarywang</groupId>
             <artifactId>weixin-java-pay</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>com.qiguliuxing</groupId>
             <artifactId>dts-dao</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
-	        <groupId>org.apache.commons</groupId>
-	        <artifactId>commons-email</artifactId>
-	        <version>1.5</version>
-	    </dependency>
-    </dependencies>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.5</version>
+        </dependency>
+
+       <!-- Swagger 配置 -->
+       <dependency>
+           <groupId>io.springfox</groupId>
+           <artifactId>springfox-swagger2</artifactId>
+       </dependency>
+       <dependency>
+           <groupId>com.github.xiaoymin</groupId>
+           <artifactId>swagger-bootstrap-ui</artifactId>
+       </dependency>
+   </dependencies>
     
 </project>
