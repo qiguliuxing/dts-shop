@@ -40,6 +40,9 @@
 
 [项目文档地址：https://www.shequlianshang.com/doc](https://www.shequlianshang.com/doc)
 
+### Tips
+开发环境如果发生请求无法访问到本地服务器，可能是浏览器存在跨域问题导致: https://junyiseo.com/qita/792.html。
+
 ### 小程序演示图
 <table border="0">
 <tbody>
