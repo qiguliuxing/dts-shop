@@ -1,18 +1,14 @@
 package com.qiguliuxing.dts.wx.web;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Callable;
-import java.util.concurrent.FutureTask;
-import java.util.concurrent.RejectedExecutionHandler;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-
-import javax.validation.constraints.NotNull;
-
+import com.alibaba.fastjson.JSONObject;
+import com.github.pagehelper.PageInfo;
+import com.mysql.cj.util.StringUtils;
+import com.qiguliuxing.dts.core.util.ResponseUtil;
+import com.qiguliuxing.dts.core.validator.Order;
+import com.qiguliuxing.dts.core.validator.Sort;
+import com.qiguliuxing.dts.db.domain.*;
+import com.qiguliuxing.dts.db.service.*;
+import com.qiguliuxing.dts.wx.annotation.LoginUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,33 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.alibaba.fastjson.JSONObject;
-import com.github.pagehelper.PageInfo;
-import com.mysql.jdbc.StringUtils;
-import com.qiguliuxing.dts.core.util.ResponseUtil;
-import com.qiguliuxing.dts.core.validator.Order;
-import com.qiguliuxing.dts.core.validator.Sort;
-import com.qiguliuxing.dts.db.domain.DtsBrand;
-import com.qiguliuxing.dts.db.domain.DtsCategory;
-import com.qiguliuxing.dts.db.domain.DtsComment;
-import com.qiguliuxing.dts.db.domain.DtsFootprint;
-import com.qiguliuxing.dts.db.domain.DtsGoods;
-import com.qiguliuxing.dts.db.domain.DtsSearchHistory;
-import com.qiguliuxing.dts.db.domain.DtsUser;
-import com.qiguliuxing.dts.db.service.DtsBrandService;
-import com.qiguliuxing.dts.db.service.DtsCategoryService;
-import com.qiguliuxing.dts.db.service.DtsCollectService;
-import com.qiguliuxing.dts.db.service.DtsCommentService;
-import com.qiguliuxing.dts.db.service.DtsFootprintService;
-import com.qiguliuxing.dts.db.service.DtsGoodsAttributeService;
-import com.qiguliuxing.dts.db.service.DtsGoodsProductService;
-import com.qiguliuxing.dts.db.service.DtsGoodsService;
-import com.qiguliuxing.dts.db.service.DtsGoodsSpecificationService;
-import com.qiguliuxing.dts.db.service.DtsGrouponRulesService;
-import com.qiguliuxing.dts.db.service.DtsIssueService;
-import com.qiguliuxing.dts.db.service.DtsSearchHistoryService;
-import com.qiguliuxing.dts.db.service.DtsUserService;
-import com.qiguliuxing.dts.wx.annotation.LoginUser;
+import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.*;
 
 /**
  * 商品服务

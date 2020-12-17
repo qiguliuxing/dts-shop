@@ -77,7 +77,7 @@ public class HomeCacheManager {
 	}
 
 	/**
-	 * 清除缓存数据
+	 * 根据键值清除缓存数据
 	 */
 	public static void clear(String cacheKey) {
 		Map<String, Object> cacheData = cacheDataList.get(cacheKey);

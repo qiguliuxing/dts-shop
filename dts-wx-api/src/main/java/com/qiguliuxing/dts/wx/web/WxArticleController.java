@@ -15,7 +15,7 @@ import com.qiguliuxing.dts.db.domain.DtsArticle;
 import com.qiguliuxing.dts.db.service.DtsArticleService;
 
 /**
- * 用户收货地址服务
+ * 公告文章服务
  */
 @RestController
 @RequestMapping("/wx/article")
