@@ -86,7 +86,7 @@ public class AdminAuthController {
 	 */
 	@RequiresAuthentication
 	@PostMapping("/logout")
-	public Object login() {
+	public Object logout() {
 		Subject currentUser = SecurityUtils.getSubject();
 		currentUser.logout();
 

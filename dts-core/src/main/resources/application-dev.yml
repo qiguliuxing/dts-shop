@@ -15,9 +15,9 @@ dts:
     mail:
       # 邮件通知配置,邮箱一般用于接收业务通知例如收到新的订单，sendto 定义邮件接收者，通常为商城运营人员
       enable: true
-      host: smtp.aliyun.com
-      username: dtsshop@aliyun.com
-      password: xxx
+      host: smtp.office365.com
+      username: jumbox_nb@outlook.com
+      password: Utopia123
       sendfrom: xxx@aliyun.com
       sendto: xxx@qq.com
 
@@ -25,7 +25,7 @@ dts:
     # 短信息用于通知客户，例如发货短信通知，注意配置格式；template-name，template-templateId 请参考 NotifyType 枚举值
     sms:
       enable: true
-      appid: xxx
+      appid: 123
       appkey: xxx
       template:
       - name: paySucceed
@@ -128,10 +128,10 @@ pagehelper:
 spring:
   datasource:
     druid:
-      url:  jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+      url:  jdbc:mysql://localhost:3306/dts-shop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
       driver-class-name:  com.mysql.jdbc.Driver
-      username:  root
-      password:  123456
+      username:  dtsshop
+      password:  dtsshop123
       initial-size:  10
       max-active:  50
       min-idle:  10

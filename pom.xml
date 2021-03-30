@@ -18,14 +18,16 @@
         <java.version>1.8</java.version>
         <maven.test.skip>true</maven.test.skip>
         <fastjson.version>1.2.62</fastjson.version>
-        <jackson-databind.version>2.9.8</jackson-databind.version>
+        <jackson-databind.version>2.10.0.pr1</jackson-databind.version>
+        <swagger2.version>2.9.2</swagger2.version>
+        <swagger-bootstrap.version>1.9.3</swagger-bootstrap.version>
 	</properties>
     
 	<modules>
 	    <module>dts-admin-api</module>
+        <module>dts-wx-api</module>
 	    <module>dts-core</module>
 	    <module>dts-dao</module>
-	    <module>dts-wx-api</module>
   </modules>
   
 	<dependencyManagement>
@@ -53,14 +55,14 @@
             <dependency>
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
-                <version>6.0.15.Final</version>
+                <version>6.1.0.Final</version>
             </dependency>
 
             <!-- MySQL 连接驱动依赖 -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.46</version>
+                <version>8.0.16</version>
             </dependency>
 
             <dependency>
@@ -116,8 +118,7 @@
                 <artifactId>spring-boot-starter-mail</artifactId>
                 <version>2.0.4.RELEASE</version>
 			</dependency>
-			
-			
+
 			 <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
@@ -127,6 +128,18 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson-databind.version}</version>
+            </dependency>
+
+            <!-- Swagger 配置 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>swagger-bootstrap-ui</artifactId>
+                <version>${swagger-bootstrap.version}</version>
             </dependency>
 		</dependencies>
 	</dependencyManagement>

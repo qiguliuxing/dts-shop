@@ -10,7 +10,7 @@ dts:
     # 请参考“商户证书”一节 https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=4_3
     key-path: xxxxx
 
- #通知相关配置
+  #通知相关配置
   notify:
     mail:
       # 邮件通知配置,邮箱一般用于接收业务通知例如收到新的订单，sendto 定义邮件接收者，通常为商城运营人员
