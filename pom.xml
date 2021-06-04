@@ -53,7 +53,7 @@
             <dependency>
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
-                <version>6.0.15.Final</version>
+                <version>6.0.20.Final</version>
             </dependency>
 
             <!-- MySQL 连接驱动依赖 -->
