@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <maven.test.skip>true</maven.test.skip>
         <fastjson.version>1.2.62</fastjson.version>
-        <jackson-databind.version>2.9.8</jackson-databind.version>
+        <jackson-databind.version>2.9.10.8</jackson-databind.version>
 	</properties>
     
 	<modules>
